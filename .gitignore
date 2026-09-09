@@ -1,0 +1,20 @@
+# Dependencies
+node_modules
+client/node_modules
+
+# Production Build
+client/dist
+
+# SQLite temporary files (keep hotel.db if you want initial seed, ignore WAL journals)
+server/database/*.db-wal
+server/database/*.db-shm
+
+# Environment & Logs
+.env
+.env.local
+*.log
+npm-debug.log*
+
+# OS Files
+.DS_Store
+Thumbs.db

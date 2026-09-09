@@ -1,0 +1,24 @@
+{
+  "name": "hotel-booking-pms",
+  "version": "1.0.0",
+  "description": "Hotel Booking & Room Management System - USTH ICT3.005 Web Application Final Project",
+  "main": "server/index.js",
+  "scripts": {
+    "build": "npm run build --prefix client",
+    "start": "node server/index.js",
+    "server": "node server/index.js",
+    "client": "npm run dev --prefix client",
+    "dev": "concurrently -n \"SERVER,CLIENT\" -c \"blue,green\" \"npm run server\" \"npm run client\"",
+    "test:stress": "node scripts/stress-test.js"
+  },
+  "dependencies": {
+    "better-sqlite3": "^13.0.3",
+    "cors": "^2.8.5",
+    "express": "^4.21.2",
+    "morgan": "^1.10.0"
+  },
+  "devDependencies": {
+    "autocannon": "^8.0.0",
+    "concurrently": "^9.1.2"
+  }
+}
