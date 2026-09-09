@@ -4,7 +4,8 @@
   "description": "Hotel Booking & Room Management System - USTH ICT3.005 Web Application Final Project",
   "main": "server/index.js",
   "scripts": {
-    "build": "npm run build --prefix client",
+    "postinstall": "npm install --prefix client",
+    "build": "npm install --prefix client && npm run build --prefix client",
     "start": "node server/index.js",
     "server": "node server/index.js",
     "client": "npm run dev --prefix client",
