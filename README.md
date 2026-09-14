@@ -71,7 +71,7 @@ Sau đó truy cập toàn bộ ứng dụng tại [http://localhost:5000](http:/
 ---
 
 #### ⚡ Kiểm thử tải và hiệu năng API (Stress Test)
-Chạy kịch bản đo đạc hiệu năng và tải đồng thời với Autocannon:
+*(Lưu ý: Hãy đảm bảo Server đang chạy ở một terminal khác bằng lệnh `npm run dev` hoặc `npm run server` trước khi test).*
 ```bash
 npm run test:stress
 ```

@@ -4,11 +4,38 @@
  */
 
 const autocannon = require('autocannon');
+const http = require('http');
+
+function checkServerOnline() {
+  return new Promise((resolve) => {
+    const req = http.get('http://localhost:5000/api/health', (res) => {
+      resolve(res.statusCode === 200);
+    });
+    req.on('error', () => {
+      resolve(false);
+    });
+    req.setTimeout(2000, () => {
+      req.destroy();
+      resolve(false);
+    });
+  });
+}
 
 async function runBenchmark() {
   console.log('\n===============================================================');
   console.log('  USTH ICT3.005 - BENCHMARK & STRESS TESTING HOTEL SYSTEM API  ');
   console.log('===============================================================\n');
+
+  const isOnline = await checkServerOnline();
+  if (!isOnline) {
+    console.error('❌ LỖI: Backend Server chưa được bật tại http://localhost:5000!');
+    console.error('\n👉 Nguyên nhân:');
+    console.error('   Server đang bị tắt (bạn vừa nhấn Ctrl + C để dừng lệnh npm run dev trước đó).');
+    console.error('\n👉 Cách chạy đúng:');
+    console.error('   1. Mở Terminal 1: Chạy "npm run dev" (hoặc "npm run server") và GIỮ NGUYÊN terminal đó.');
+    console.error('   2. Mở Terminal 2 (cửa sổ mới): Chạy "npm run test:stress".\n');
+    process.exit(1);
+  }
 
   console.log(' Đang bắt đầu kiểm thử tải (Stress Testing) trên endpoint GET /api/rooms...');
   console.log(' Cấu hình kiểm thử:');
