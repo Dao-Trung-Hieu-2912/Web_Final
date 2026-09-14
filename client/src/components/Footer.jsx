@@ -6,7 +6,7 @@ export default function Footer({ onOpenPMS }) {
     <footer className="bg-slate-950 text-slate-400 border-t border-slate-800 text-xs sm:text-sm">
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-12">
         <div className="grid grid-cols-1 md:grid-cols-4 gap-8 mb-8">
-          
+
           {/* Col 1: Brand */}
           <div className="space-y-3 md:col-span-2">
             <div className="flex items-center gap-2 text-white">
@@ -28,15 +28,15 @@ export default function Footer({ onOpenPMS }) {
             <h4 className="text-white font-bold text-xs uppercase tracking-wider">Thông Tin Liên Hệ</h4>
             <div className="flex items-start gap-2 text-xs">
               <MapPin className="w-4 h-4 text-amber-500 shrink-0 mt-0.5" />
-              <span>Bãi Dài, Gành Dầu, Phú Quốc, Kiên Giang, Việt Nam</span>
+              <span>USTH</span>
             </div>
             <div className="flex items-center gap-2 text-xs">
               <Phone className="w-4 h-4 text-amber-500 shrink-0" />
-              <span>Hotline 24/7: 1900 8888 • (0297) 388 9999</span>
+              <span>Hotline 24/7: 0123456789</span>
             </div>
             <div className="flex items-center gap-2 text-xs">
               <Mail className="w-4 h-4 text-amber-500 shrink-0" />
-              <span>concierge@lumiere-resort.com</span>
+              <span>usth@resort.com</span>
             </div>
           </div>
 
@@ -61,11 +61,7 @@ export default function Footer({ onOpenPMS }) {
 
         <div className="pt-6 border-t border-slate-900 flex flex-col sm:flex-row items-center justify-between gap-3 text-xs text-slate-500">
           <p>© 2026 Lumière Grand Resort & Spa. All rights reserved.</p>
-          <div className="flex items-center gap-1">
-            <span>Xây dựng với</span>
-            <Heart className="w-3.5 h-3.5 text-rose-500 fill-rose-500" />
-            <span>chuẩn Fullstack tinh gọn cho Đồ án USTH</span>
-          </div>
+
         </div>
 
       </div>

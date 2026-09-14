@@ -73,7 +73,7 @@ export default function FolioModal({ bookingId, onClose, onCheckOutComplete }) {
                   <span className="font-serif text-2xl font-bold text-slate-900">LUMIÈRE</span>
                 </div>
                 <p className="text-xs text-slate-500 mt-1">Grand Resort & Spa 5-Star Luxury</p>
-                <p className="text-xs text-slate-400">Bãi Dài, Phú Quốc, Kiên Giang, Việt Nam</p>
+                <p className="text-xs text-slate-400">USTH</p>
                 <p className="text-xs text-slate-400">Hotline: 1900 8888 • info@lumiere-resort.com</p>
               </div>
 

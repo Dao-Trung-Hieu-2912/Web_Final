@@ -22,7 +22,7 @@ export default function HeroSection({ searchParams, setSearchParams, onSearch })
         {/* Top Luxury Pill */}
         <div className="inline-flex items-center gap-2 px-4 py-1.5 rounded-full bg-amber-500/10 border border-amber-500/30 text-amber-300 text-xs sm:text-sm font-medium tracking-wide mb-6 backdrop-blur-md">
           <Sparkles className="w-4 h-4 text-amber-400" />
-          <span>Khu Nghỉ Dưỡng Biển Sang Trọng Bậc Nhất 2026</span>
+          <span>Khu Nghỉ Dưỡng Biển Sang Trọng Bậc Nhất</span>
         </div>
 
         {/* Luxury Typography */}
@@ -54,15 +54,15 @@ export default function HeroSection({ searchParams, setSearchParams, onSearch })
         </div>
 
         {/* Floating Search Bar (Airbnb & Booking.com style) */}
-        <div className="mt-10 max-w-5xl mx-auto bg-white/95 backdrop-blur-xl p-3 sm:p-4 rounded-3xl shadow-2xl border border-white/20 text-slate-900">
-          <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-3">
+        <div className="mt-10 max-w-6xl mx-auto bg-white/95 backdrop-blur-xl p-3 sm:p-4 rounded-3xl shadow-2xl border border-white/20 text-slate-900">
+          <div className="grid grid-cols-1 sm:grid-cols-2 lg:flex lg:flex-row lg:items-stretch gap-3">
             
             {/* Check-in Date */}
-            <div className="flex items-center gap-3 p-3 bg-slate-50 hover:bg-amber-50/50 rounded-2xl border border-slate-200/80 transition-colors text-left">
-              <div className="p-2.5 rounded-xl bg-amber-100 text-amber-700">
+            <div className="flex-1 min-w-0 flex items-center gap-3 p-3 bg-slate-50 hover:bg-amber-50/50 rounded-2xl border border-slate-200/80 transition-colors text-left">
+              <div className="p-2.5 rounded-xl bg-amber-100 text-amber-700 shrink-0">
                 <Calendar className="w-5 h-5" />
               </div>
-              <div className="flex-1">
+              <div className="flex-1 min-w-0">
                 <label className="block text-[11px] font-bold uppercase tracking-wider text-slate-500">
                   Ngày nhận phòng
                 </label>
@@ -77,11 +77,11 @@ export default function HeroSection({ searchParams, setSearchParams, onSearch })
             </div>
 
             {/* Check-out Date */}
-            <div className="flex items-center gap-3 p-3 bg-slate-50 hover:bg-amber-50/50 rounded-2xl border border-slate-200/80 transition-colors text-left">
-              <div className="p-2.5 rounded-xl bg-amber-100 text-amber-700">
+            <div className="flex-1 min-w-0 flex items-center gap-3 p-3 bg-slate-50 hover:bg-amber-50/50 rounded-2xl border border-slate-200/80 transition-colors text-left">
+              <div className="p-2.5 rounded-xl bg-amber-100 text-amber-700 shrink-0">
                 <Calendar className="w-5 h-5" />
               </div>
-              <div className="flex-1">
+              <div className="flex-1 min-w-0">
                 <label className="block text-[11px] font-bold uppercase tracking-wider text-slate-500">
                   Ngày trả phòng
                 </label>
@@ -96,11 +96,11 @@ export default function HeroSection({ searchParams, setSearchParams, onSearch })
             </div>
 
             {/* Guests count */}
-            <div className="flex items-center gap-3 p-3 bg-slate-50 hover:bg-amber-50/50 rounded-2xl border border-slate-200/80 transition-colors text-left">
-              <div className="p-2.5 rounded-xl bg-blue-100 text-blue-700">
+            <div className="flex-1 min-w-0 flex items-center gap-3 p-3 bg-slate-50 hover:bg-amber-50/50 rounded-2xl border border-slate-200/80 transition-colors text-left">
+              <div className="p-2.5 rounded-xl bg-blue-100 text-blue-700 shrink-0">
                 <Users className="w-5 h-5" />
               </div>
-              <div className="flex-1">
+              <div className="flex-1 min-w-0">
                 <label className="block text-[11px] font-bold uppercase tracking-wider text-slate-500">
                   Số lượng khách
                 </label>
@@ -118,40 +118,38 @@ export default function HeroSection({ searchParams, setSearchParams, onSearch })
               </div>
             </div>
 
-            {/* Room category / Submit */}
-            <div className="flex items-center gap-2">
-              <div className="flex-1 flex items-center gap-2 p-3 bg-slate-50 rounded-2xl border border-slate-200/80 text-left">
-                <div className="p-2.5 rounded-xl bg-emerald-100 text-emerald-700">
-                  <Home className="w-5 h-5" />
-                </div>
-                <div className="flex-1 min-w-0">
-                  <label className="block text-[11px] font-bold uppercase tracking-wider text-slate-500">
-                    Hạng phòng
-                  </label>
-                  <select
-                    value={searchParams.type}
-                    onChange={(e) => handleInputChange('type', e.target.value)}
-                    className="w-full bg-transparent text-sm font-semibold text-slate-800 focus:outline-none cursor-pointer truncate"
-                  >
-                    <option value="all">Tất cả hạng</option>
-                    <option value="deluxe">Deluxe</option>
-                    <option value="suite">Executive Suite</option>
-                    <option value="penthouse">Penthouse</option>
-                    <option value="superior">Superior</option>
-                    <option value="standard">Standard</option>
-                  </select>
-                </div>
+            {/* Room category */}
+            <div className="flex-1 min-w-0 flex items-center gap-3 p-3 bg-slate-50 hover:bg-amber-50/50 rounded-2xl border border-slate-200/80 transition-colors text-left">
+              <div className="p-2.5 rounded-xl bg-emerald-100 text-emerald-700 shrink-0">
+                <Home className="w-5 h-5" />
               </div>
-
-              {/* Submit Button */}
-              <button
-                onClick={onSearch}
-                className="h-full px-6 py-3.5 bg-gradient-to-r from-amber-500 to-amber-600 hover:from-amber-600 hover:to-amber-700 text-slate-950 font-bold rounded-2xl shadow-lg shadow-amber-500/30 flex items-center justify-center gap-2 transition-all hover:scale-[1.02] active:scale-[0.98]"
-              >
-                <Search className="w-5 h-5 text-slate-950" />
-                <span className="hidden sm:inline font-bold">Tìm phòng</span>
-              </button>
+              <div className="flex-1 min-w-0">
+                <label className="block text-[11px] font-bold uppercase tracking-wider text-slate-500">
+                  Hạng phòng
+                </label>
+                <select
+                  value={searchParams.type}
+                  onChange={(e) => handleInputChange('type', e.target.value)}
+                  className="w-full bg-transparent text-sm font-semibold text-slate-800 focus:outline-none cursor-pointer"
+                >
+                  <option value="all">Tất cả hạng</option>
+                  <option value="deluxe">Deluxe</option>
+                  <option value="suite">Executive Suite</option>
+                  <option value="penthouse">Penthouse</option>
+                  <option value="superior">Superior</option>
+                  <option value="standard">Standard</option>
+                </select>
+              </div>
             </div>
+
+            {/* Submit Button */}
+            <button
+              onClick={onSearch}
+              className="sm:col-span-2 lg:col-span-1 lg:shrink-0 flex items-center justify-center gap-2 px-6 sm:px-8 py-3.5 bg-gradient-to-r from-amber-500 to-amber-600 hover:from-amber-600 hover:to-amber-700 text-slate-950 font-bold rounded-2xl shadow-lg shadow-amber-500/30 transition-all hover:scale-[1.02] active:scale-[0.98] cursor-pointer"
+            >
+              <Search className="w-5 h-5 text-slate-950 shrink-0" />
+              <span className="font-bold whitespace-nowrap">Tìm phòng</span>
+            </button>
 
           </div>
         </div>
