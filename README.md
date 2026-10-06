@@ -3,9 +3,19 @@
 > **Đồ án cuối kỳ môn học:** ICT3.005 Web Application Development  
 > **Trường:** Đại học Khoa học và Công nghệ Hà Nội (USTH)  
 
-Hệ thống Đặt phòng Khách sạn 5 sao cao cấp & Quản trị Lễ tân (PMS - Property Management System) xây dựng theo kiến trúc Fullstack hiện đại, tinh gọn và hiệu năng cao.
+Hệ thống Đặt phòng Khách sạn 5 sao cao cấp & Quản trị Lễ tân xây dựng theo kiến trúc Fullstack hiện đại, tinh gọn và hiệu năng cao.
 
 ---
+## 👥 Thành viên thực hiện
+
+| STT | Mã sinh viên | Họ và tên |
+| :---: | :---: | :--- |
+| 1 | 23BA14120 | Đặng Việt Hoàng  |
+| 2 | 23BA14121 | Nguyễn Đăng Hoàng |
+| 3 | 23BA14107 | Đào Trung Hiếu |
+| 4 | 23BA14059 | Nguyễn Minh Đức |
+| 5 | 2410761 | Nguyễn Tú Oanh |
+| 6 | 23BA14278 | Nguyễn Quang Thuần |
 
 ## 🛠️ Công Nghệ Sử Dụng
 
