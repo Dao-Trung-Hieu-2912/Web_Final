@@ -129,3 +129,18 @@ Web_Final/
    - **Sơ đồ phòng (Room Rack):** Quản lý trạng thái từng phòng (*Trống, Có khách, Đang dọn dẹp, Bảo trì*).
    - **Check-in / Check-out:** Quy trình nhận/trả phòng nhanh chóng.
    - **Dịch vụ & Folio:** Thêm dịch vụ ẩm thực/spa/giặt là và in hóa đơn thanh toán chi tiết.
+
+---
+
+## 👥 Phân công công việc (Team Members & Task Assignment)
+
+Bảng phân công chi tiết vai trò, trách nhiệm và các mô-đun/tập tin do 6 thành viên trong nhóm đảm nhận:
+
+| STT | Mã sinh viên | Họ và tên | Vai trò (Role) | Mô-đun & File đảm nhận | Nhiệm vụ chính & Đóng góp |
+| :-: | :---: | :--- | :--- | :--- | :--- |
+| 1 | 23BA14120 | **Đặng Việt Hoàng** *(Leader)* | Trưởng nhóm / Kiến trúc hệ thống | `server/index.js`, `server/routes/rooms.js`, `server/routes/bookings.js`, `package.json`, `.gitignore` | Lập kế hoạch dự án, phân chia công việc, thiết kế kiến trúc Fullstack, khởi tạo Express server và định tuyến API cốt lõi (Rooms & Bookings), cấu hình deployment. |
+| 2 | 23BA14107 | **Đào Trung Hiếu** | Kỹ sư Fullstack (Core PMS & Booking) | `client/src/pages/PMSAdmin.jsx`, `client/src/components/pms/InteractiveTimeline.jsx`, `client/src/components/pms/BookingsManager.jsx`, `client/src/components/pms/FolioModal.jsx`, `client/src/services/api.js` | Phát triển toàn bộ phân hệ Quản trị Lễ tân (PMS), sơ đồ Timeline 14 ngày trực quan, quy trình Check-in / Check-out, quản lý thanh toán Folio và kết nối dữ liệu API thời gian thực. |
+| 3 | 23BA14121 | **Nguyễn Đăng Hoàng** | Kỹ sư Giao diện (Frontend UI/UX) | `client/src/pages/GuestPortal.jsx`, `client/src/components/guest/HeroSection.jsx`, `client/src/components/guest/FilterBar.jsx`, `client/src/components/guest/RoomCard.jsx`, `client/src/components/guest/BookingModal.jsx`, `client/src/components/guest/RoomDetailModal.jsx` | Xây dựng toàn bộ giao diện Cổng đặt phòng cho khách (Guest Portal), bộ lọc tìm kiếm theo ngày và hạng phòng, modal đặt phòng trực tuyến và tra cứu tình trạng đơn đặt. |
+| 4 | 23BA14059 | **Nguyễn Minh Đức** | Kỹ sư Dữ liệu (Database & Modeling) | `server/db.js`, `server/database/hotel.db`, `server/routes/stats.js`, `server/routes/services.js` | Thiết kế cơ sở dữ liệu SQLite quan hệ (Better-SQLite3), lập trình logic tạo bảng và nạp dữ liệu mẫu (Seeding data), xây dựng API thống kê doanh thu và quản lý dịch vụ bổ sung. |
+| 5 | 2410761 | **Nguyễn Tú Oanh** | Kỹ sư Đảm bảo chất lượng & Hiệu năng (QA & Testing) | `scripts/stress-test.js`, `client/src/components/BenchmarkPanel.jsx` | Viết kịch bản kiểm thử tải áp lực cao (Stress Test bằng Autocannon), xây dựng BenchmarkPanel trực quan hóa thời gian phản hồi API và tối ưu hiệu năng phục vụ đồng thời nhiều kết nối. |
+| 6 | 23BA14278 | **Nguyễn Quang Thuần** | Kỹ sư Giao diện chung & Tài liệu kỹ thuật | `client/src/index.css`, `client/src/components/Navbar.jsx`, `client/src/components/Footer.jsx`, `README.md`, `client/vite.config.js` | Thiết lập Design System với Tailwind CSS v4, font chữ thương hiệu Playfair Display & Plus Jakarta Sans, layout Navbar/Footer dùng chung, và biên soạn tài liệu hướng dẫn triển khai `README.md`. |
